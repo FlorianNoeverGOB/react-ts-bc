@@ -3,6 +3,7 @@
   "version": "0.1.0",
   "description": "A template for React to use in Business Central AL",
   "author": "Florian Noever",
+  "type": "module",
   "license": "MIT",
   "private": true,
   "imports": {
@@ -15,7 +16,7 @@
     "lint:fix": "eslint \"src/**/*.{ts,tsx}\" --fix",
     "outdated": "npm outdated",
     "update:minors": "npm update",
-    "update:majors": "npx npm-check-updates -u -y && npm install"
+    "update:majors": "npx npm-check-updates -u && npm install"
   },
   "eslintConfig": {
     "extends": [
@@ -37,27 +38,28 @@
   },
   "dependencies": {
     "react": "^19.2.0",
-    "react-dom": "^19.2.0",
-    "web-vitals": "^5.1.0"
+    "react-dom": "^19.2.0"
   },
   "devDependencies": {
-    "@eslint/compat": "^1.4.0",
+    "@babel/core": "^7.28.4",
+    "@babel/preset-env": "^7.28.3",
+    "@babel/preset-react": "^7.27.1",
+    "@babel/preset-typescript": "^7.27.1",
+    "@eslint/js": "^9.37.0",
     "@types/react": "^19.2.2",
     "@types/react-dom": "^19.2.1",
-    "@typescript-eslint/eslint-plugin": "^8.46.0",
-    "@typescript-eslint/parser": "^8.46.0",
+    "babel-loader": "^10.0.0",
     "css-loader": "^7.1.2",
     "eslint": "^9.37.0",
-    "eslint-import-resolver-typescript": "^4.4.4",
-    "eslint-plugin-import": "^2.32.0",
     "eslint-plugin-react": "^7.37.5",
-    "eslint-plugin-react-hooks": "^7.0.0",
+    "globals": "^16.4.0",
     "html-loader": "^5.1.0",
     "html-webpack-plugin": "^5.6.4",
     "license-webpack-plugin": "^4.0.2",
     "style-loader": "^4.0.0",
     "ts-loader": "^9.5.4",
     "typescript": "^5.9.3",
+    "typescript-eslint": "^8.46.0",
     "webpack": "^5.102.1",
     "webpack-cli": "^6.0.1",
     "webpack-dev-server": "^5.2.2"
