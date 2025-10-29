@@ -13,6 +13,7 @@ CreateRootWhenLoaded('controlAddIn');
 async function CreateRootWhenLoaded(elementId: string): Promise<void> {
     const root = await waitForElementToExistId(elementId);
     CreateRoot(root as HTMLElement);
+    root.setAttribute('rbc-loaded', 'true');
 
     // Example. Remove for Production
     exampleFunction();
